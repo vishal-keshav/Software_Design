@@ -16,6 +16,7 @@
 
 class component_node{
 	public:
+		component_node(int &item, component_node *left = 0, component_note *right=0);
 		/*Pure virtual function (de-constructor)
 		A pure virtual function has to be overridden by the derived class*/
 		virtual ~component_node()=0;
