@@ -34,3 +34,24 @@ class component_node{
 		component_node *left_;
 		component_node *right_;
 };
+
+class leaf_node:component_node{
+	public:
+		leaf_node(int &item):item_(item) {
+			type = 0;
+		}
+		~leaf_node(){
+			//Nothing to destruct
+		}
+	private:
+		int type;
+};
+
+class unary_node:component_node{
+	public:
+		unary_node(int &item, component_node *left = 0, component_node *right=0);
+		~unary_node(){
+			delete left;
+			delete right;
+		}
+};
