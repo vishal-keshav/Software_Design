@@ -1,0 +1,21 @@
+syntax = "proto3";
+package example_proto_class;
+
+message Computer_Cost{
+    CPU_Cost cpu_cost = 1;
+    Monitor_Cost mon_cost = 2;
+    Interface_Cost in_cost = 3;
+    string brand = 4;
+}
+
+message CPU_Cost{
+    int32 cost = 1;
+}
+
+message Monitor_Cost{
+    int32 cost = 1;
+}
+
+message Interface_Cost{
+    int32 cost = 1;
+}

@@ -4,6 +4,14 @@
 
 using namespace std;
 
+enum DataType{
+    INT = 0,
+    FLOAT = 1,
+    DOUBLE = 2,
+    CHAR = 3,
+    STRING = 4
+}
+
 class DataStreamer{
 public:
     // Constructor with base member initialization
