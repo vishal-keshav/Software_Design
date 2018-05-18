@@ -3,10 +3,10 @@ all: program
 program : main.o data_stream.o
 	g++ -o program main.o data_stream.o
 
-main.o : main.cpp
+main.o :
 	g++ -c main.cpp -Iinclude
 
-data_stream.o : data_stream.cpp
+data_stream.o :
 	g++ -c src/data_stream.cpp -Iinclude
 
 clean:
