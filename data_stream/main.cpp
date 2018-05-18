@@ -1,10 +1,23 @@
 
 #include "data_stream.h"
+#include "gtest/gtest.h"
 
 using namespace std;
 
-int main(){
-    int a_in = 34;
+TEST(ReadWriteTest, Test1){
+    int in = 34, out;
+    DataStreamer ds;
+    ds.init_num_bytes(128);
+    EXPECT_EQ(128, ds.print_unused());
+    ds << in;
+    EXPECT_EQ(124, ds.print_unused());
+    ds.init_read_mode();
+    ds >> out;
+    EXPECT_EQ(in, out);
+}
+
+int main(int argc, char **argv){
+    /*int a_in = 34;
     int b_in = 12;
     float c_in = 8.90;
     double d_in = 100.004;
@@ -15,21 +28,21 @@ int main(){
     DataStreamer ds;
     ds.init_num_bytes(1024);
     ds << a_in;
-    ds.print_unsued();
+    ds.print_unused();
     ds << b_in;
-    ds.print_unsued();
+    ds.print_unused();
     ds << c_in;
-    ds.print_unsued();
+    ds.print_unused();
     ds << d_in;
-    ds.print_unsued();
+    ds.print_unused();
     ds << e_in;
-    ds.print_unsued();
+    ds.print_unused();
     ds << f_in;
-    ds.print_unsued();
+    ds.print_unused();
     ds << g_in;
-    ds.print_unsued();
+    ds.print_unused();
     ds << h_in;
-    ds.print_unsued();
+    ds.print_unused();
     ds.init_read_mode();
     int a_out, b_out, e_out;
     float c_out;
@@ -51,6 +64,7 @@ int main(){
     ds >> g_out;
     cout << g_out << endl;
     ds >> h_out;
-    cout << h_out << endl;
-    return 0;
+    cout << h_out << endl;*/
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }

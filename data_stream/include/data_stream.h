@@ -52,8 +52,8 @@ using namespace std;
 
      DataStreamer& operator<<(string &input);
      DataStreamer& operator>>(string& output);
-     int print_unsued(){
-         cout << "Total unused bytes: " << unused_bytes << endl;
+     int print_unused(){
+         return unused_bytes;
      }
      // Desctructor, with memory free
      ~DataStreamer(){
