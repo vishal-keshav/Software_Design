@@ -1,13 +1,22 @@
+GTEST_INCLUDE_DIR = ~/googletest/googletest/include/
+GTEST_LIB_DIR = ~/googletest/libgtest.a
+
+INCLUDE_DIR = include
+LIBS = -pthread $(GTEST_LIB_DIR)
+
+CXX = g++
+CXXFLAGS = -std=c++11
+
 all: program
 
 program : main.o data_stream.o
-	g++ -o program main.o data_stream.o ~/googletest/libgtest.a -pthread
+	$(CXX) -o program main.o data_stream.o $(LIBS)
 
 main.o :
-	g++ -c main.cpp -isystem ~/googletest/googletest/include/ -Iinclude
+	$(CXX) -c main.cpp -isystem $(GTEST_INCLUDE_DIR) -I$(INCLUDE_DIR)
 
 data_stream.o :
-	g++ -c src/data_stream.cpp -Iinclude
+	$(CXX) -c src/data_stream.cpp -I$(INCLUDE_DIR)
 
 clean:
-	rm main.o data_stream.o program
+	rm -f main.o data_stream.o program
