@@ -34,7 +34,11 @@ using namespace std;
      void init_read_mode(void);
      //Delete the memory chunk
      void clear_memory(){
-         delete [] data_ref;
+         // dont invoke double free
+         if(unused_bytes!=-1){
+             unused_bytes = -1;
+             delete [] data_ref;
+         }
      }
      //Operator overloading, args passed by ref-value
      //[TO-DO] Reduce the source code with templates
@@ -66,6 +70,7 @@ using namespace std;
      int unused_bytes;
      int* data_ref;
      int *read_write_ref;
+
  };
 
  #endif
