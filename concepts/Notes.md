@@ -12,3 +12,4 @@ The purpose of OO analysis and design can described as:
 * Identifying their relationships.
 * Making a design, which can be converted to executables using OO languages.
 
+[TO-DO] Iterator and visitor pattern
