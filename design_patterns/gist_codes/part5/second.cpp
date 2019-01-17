@@ -97,6 +97,7 @@ public:
 		//anymore becasue camera is removed)
 	}
 };
+
 CameraFeedReceiver CameraFeedReceiver::cfr;
 
 int main()
