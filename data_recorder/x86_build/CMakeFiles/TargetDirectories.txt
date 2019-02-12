@@ -1,0 +1,3 @@
+/home/vishal/Github/Software_Design/data_recorder/x86_build/CMakeFiles/rebuild_cache.dir
+/home/vishal/Github/Software_Design/data_recorder/x86_build/CMakeFiles/edit_cache.dir
+/home/vishal/Github/Software_Design/data_recorder/x86_build/CMakeFiles/recorder.dir
