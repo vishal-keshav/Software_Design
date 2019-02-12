@@ -1,3 +1,0 @@
-/home/vishal/Github/Software_Design/data_recorder/android/CMakeFiles/rebuild_cache.dir
-/home/vishal/Github/Software_Design/data_recorder/android/CMakeFiles/edit_cache.dir
-/home/vishal/Github/Software_Design/data_recorder/android/CMakeFiles/recorder.dir
