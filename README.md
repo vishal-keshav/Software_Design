@@ -1,20 +1,6 @@
 # Software_Design
-Software design strategy and commonly followed design patterns are explored
+This repository contains some code and build tools know-how that has helped me
+to navigate through software designing and implementation in a better way.
 
-* Creational design patterns
-* Structural design patterns
-* Behavioral design patterns
-
-## Design pattern implemented
-
-### Composite
-
-### Bridge
-
-### Interpreter
-
-### Builder
-
-### Iterator
-
-### Visitor
+The code has been kept such that if reflects both what I have learned and also
+provide me guidance in future about how to use build systems and design patterns.
