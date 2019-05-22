@@ -17,7 +17,5 @@ def main(inference_only = True):
         with open('model.pb', 'w') as file:
             file.write(tf.get_default_graph().as_graph_def().SerializeToString())
 
-
-
 if __name__ == "__main__":
     main(True)
