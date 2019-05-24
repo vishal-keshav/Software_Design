@@ -1,0 +1,11 @@
+android_sdk_repository(
+    name = "androidsdk",
+    path = "/home/user/android_tools/Sdk",
+    # Optional.Can be omitted if `ANDROID_HOME` environment variable is set.
+)
+
+android_ndk_repository(
+    name = "androidndk",
+    path = "/home/user/android_tools/android-ndk-r17",
+    # Optional.Can be omitted if `ANDROID_NDK_HOME` environment variable is set.
+)
